@@ -1,0 +1,177 @@
+/* =========================   Reset básico   ========================= */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin:0; padding:0; width:100%; overflow-x:hidden; font-family:Arial,sans-serif; }
+
+/* ---------------- Seções com Background ---------------- */
+.section {
+  min-height:100vh;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  padding:80px 20px;
+  color:#1B1A16;
+}
+
+/* ================= Navbar ================= */
+#langToggle {
+  background-color: #f05104;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+
+#langToggle:hover {
+  background-color: #d94703;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(240, 81, 4, 0.6);
+}
+
+#langToggle:active {
+  transform: scale(0.95);
+  box-shadow: 0 0 6px rgba(240, 81, 4, 0.8);
+}
+
+/* ---------------- Hero ---------------- */
+#hero { 
+  background:url("../img/Background_hero.png") no-repeat center/cover fixed; 
+  color:#f05104; 
+}
+#hero h1 { font-size:2.5rem; font-weight:bold; margin-bottom:20px; }
+.lista-hero { list-style:none; margin:20px 0; padding:0; }
+.lista-hero li { margin-bottom:10px; font-weight:bold; font-size:1.2rem; }
+#hero .btn-light { color:#f05104; font-weight:bold; border:2px solid #f05104; padding:10px 20px; border-radius:8px; transition:0.3s; }
+#hero .btn-light:hover { background:#f05104; color:#fff; }
+
+/* ---------------- About ---------------- */
+#about { background:url("../img/Background-about.png") no-repeat center/cover fixed; color:white; }
+#about h2 { color:#f05104; font-size:2rem; font-weight:bold; margin-bottom:20px; }
+#about p { max-width:800px; line-height:1.6; margin:0 auto 20px auto; font-size:1.1rem; }
+
+/* ---------------- Skills ---------------- */
+#skills { 
+  background: url("../img/Background_skills.png") no-repeat center/cover fixed;
+  color: #f05104;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#skills h2 { margin-bottom: 40px; font-size: 2.5rem; }
+#skills .row { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; width: 100%; max-width: 1200px; }
+#skills .col { flex: 1 1 150px; max-width: 200px; }
+#skills .col div {
+  background: #1B1A16;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+#skills .col div span.title { display: block; font-size: 1.2rem; }
+#skills .col div span.description {
+  display: block;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+  font-weight: normal;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+#skills .col div:hover { transform: translateY(-10px); background: #f05104; color: #fff; box-shadow: 0 10px 20px rgba(0,0,0,0.3); }
+#skills .col div:hover span.description { max-height: 200px; opacity: 1; }
+
+/* ---------------- Projects ---------------- */
+#projects { background-color: #1B1A16; color: #f05104; min-height: 80vh; padding: 80px 20px; text-align: center; }
+#projects h2 { margin-bottom: 40px; }
+#projects p { color: #fff; margin-top: 10px; }
+.video-wrapper { position: relative; width: 800px; aspect-ratio: 16 / 9; margin: 0 auto; max-width: 100%; }
+.video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; display: block; }
+.carousel-control-prev-icon,
+.carousel-control-next-icon { background-color: #f05104; border-radius: 50%; width: 50px; height: 50px; background-size: 50% 50%; background-repeat: no-repeat; background-position: center; }
+.carousel-control-prev { left: -60px; }
+.carousel-control-next { right: -60px; }
+
+/* ---------------- Contact ---------------- */
+#contact { background-color: #1B1A16; color: white; padding: 80px 20px; }
+#contact h2 { color:#f05104; margin-bottom:40px; }
+#contact input, #contact textarea { border-radius:10px; }
+#contact .btn-primary { background-color:#f05104; border-color:#f05104; }
+#contact .btn-primary:hover { background-color:#d04303; border-color:#d04303; }
+
+/* ---------------- Footer ---------------- */
+footer {
+  border-top: 2px solid #f05104;
+  transition: all 0.3s ease;
+  z-index: 10;
+  background-color: #1B1A16;
+}
+footer.static { position: relative; }
+footer.fixed-bottom { position: fixed; bottom: 0; left: 0; width: 100%; }
+.footer-link { color: white; text-decoration: none; transition: color 0.3s; }
+.footer-link:hover { color: #472717; }
+.footer-icon { color: #ff5a07; font-size: 1.5rem; transition: transform 0.3s, color 0.3s; }
+.footer-icon:hover { color: #ff5a07; transform: translateY(-3px); }
+
+/* ---------------- Mensagem de sucesso ---------------- */
+#successMessage { display: none; opacity: 0; transition: opacity 0.5s ease; }
+
+/* ---------------- Responsividade ---------------- */
+@media(max-width:768px){
+  .section { padding:60px 15px; background-attachment:scroll; }
+  #hero h1 { font-size:2rem; } 
+  .lista-hero li{ font-size:1rem; } 
+  #hero .btn-light{ width:100%; max-width:300px; display:block; margin:0 auto; }
+  #about h2, #skills h2, #projects h2, #contact h2 { font-size:1.5rem; }
+  #about p, #skills .col div, #projects p, #contact p { font-size:1rem; max-width:90%; }
+}
+
+@media(min-width:1200px){
+  #hero h1{ font-size:3rem; } 
+  .lista-hero li{ font-size:1.3rem; }
+  #about h2, #skills h2, #projects h2, #contact h2 { font-size:2.5rem; }
+  #about p, #skills .col div, #projects p, #contact p { font-size:1.2rem; }
+}
+#backToTop {
+  position: fixed;
+  bottom: 60px;       
+  right: 0px;
+  background-color: #f05104;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;      
+  z-index: 2000;      
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#backToTop:hover {
+  background-color: #d94703;
+  transform: translateY(-3px);
+}
+
