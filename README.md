@@ -1,5 +1,5 @@
 # 🌐 Site Pessoal – Victor Fernandes
-
+Link do projeto entregue: https://vfsounddesign.netlify.app/
 Este repositório contém o código-fonte de um site portfólio responsivo para **Victor Fernandes**.  
 Ele foi desenvolvido com **HTML5**, **CSS3**, **Bootstrap 5** e **JavaScript**, utilizando também **EmailJS** para envio de mensagens do formulário de contato.
 
